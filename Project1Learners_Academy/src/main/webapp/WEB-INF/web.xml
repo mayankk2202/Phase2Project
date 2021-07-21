@@ -12,20 +12,12 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
-<!--	<servlet>
-		<servlet-name>MyDemoServlet</servlet-name>
-		<servlet-class>com.servlet.GetServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>MyDemoServlet</servlet-name>
-		<url-pattern>/MyFirstWebPage</url-pattern>
-	</servlet-mapping> -->
 	<servlet>
 		<servlet-name>MyGenServlet</servlet-name>
-		<servlet-class>com.LA.ProcessForm</servlet-class>
+		<servlet-class>com.LA.LoginController</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>MyGenServlet</servlet-name>
-		<url-pattern>/process</url-pattern>
+		<url-pattern>/LoginController</url-pattern>
 	</servlet-mapping>
 </web-app>
