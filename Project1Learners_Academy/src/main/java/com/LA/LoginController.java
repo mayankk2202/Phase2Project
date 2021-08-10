@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/LoginController")
 public class LoginController extends HttpServlet {
@@ -17,6 +18,8 @@ public class LoginController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String ID = request.getParameter("username");
 		String Pwd = request.getParameter("password");
+		HttpSession se = request.getSession();
+		se.setMaxInactiveInterval(60);
 		
 		if (ID.equalsIgnoreCase("Admin") && Pwd.equals("P@ssw0rd")) 
 			response.sendRedirect("Home.html"); 
